@@ -1,0 +1,3 @@
+#IT5016Assessment1
+Hello! This is a merge sort algorithm I managed to find online for our code research project. I chose this code because I think it gives a good, indepth look at how varibles, interation, loops and functions can all work together to work with concepts like arrays and intergers to produce a result. I hope that this works for a project and if you guys
+have any feedback please just let me know. Thanks!
