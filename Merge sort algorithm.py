@@ -9,14 +9,14 @@ import random
 #Said list is initialised here as an empty array.
 sortinglist = []
 
-#These two lines of code begin a for loop which iterates the code in line 18 according to the range and its specified number. In this case I have set the range to 75. The for loop
+#These two lines of code begin a for loop which iterates the code in line 19 according to the range and its specified number. In this case I have set the range to 75. The for loop
 #is capable of taking that range of numbers and using at as an iterater or number of times to loop.
 for i in range(75,1,-1):
     #This line of code here calls on the random module we initated earlier to call its randint method. This method will generate a pseudo-random number between the values I indicate
     #in parameters. In this case the minimum number for it to generate is 1 and the maximum number is 1000. Once this number is generated it is appended to the sorting list and the
     #for loop will move on to the next interation to generate another number to append to the sortinglist. This will continue until the loop has been run the specified number of times,
     #in this case 75 times.
-    sortinglist.append(i)
+    sortinglist.append(random.randint(1, 1001))
 
 
 #Here I define a function that takes an unsorted array as a parameter. This will be called recursively by itself in order to divide the arrays fed into it for the algorithm as
