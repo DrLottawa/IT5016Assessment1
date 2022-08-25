@@ -45,6 +45,10 @@ def game_start():
         #This is the while loop we use to continue the game until the answer is guessed. The program will loop back here after each guess and check if the current_answer variable is
         #equal to the number chosen by the computer. If not it will move on to display if the player is hot or cold then prompt them for the next answer
         while(current_answer != ai_choice):
+            #When a user makes any subsequent guesses there is a chance they could input an invalid character. In which case this while loop will continue to reprompt the user until
+            #they input a valid answer. This way the program wont crash on any of the future comparisons
+            while(current_answer == None):
+                current_answer = GetAnswer("Please enter a valid number")
             #This prompt variable contains the string "Colder...". This is what the default message is that will be displayed to the player and will only be changed if it is the inital
             #guess or if the guess is close to the answer.
             prompt = "Colder...\n"
