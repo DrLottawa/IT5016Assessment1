@@ -10,12 +10,15 @@ import random
 sortinglist = []
 
 #These two lines of code begin a for loop which iterates the code in line 19 according to the range and its specified number. In this case I have set the range to 75. The for loop
-#is capable of taking that range of numbers and using at as an iterater or number of times to loop.
+#is capable of taking that range of numbers and using at as an iterater or number of times to loop. 
+#Documentation on Range: https://www.w3schools.com/python/ref_func_range.asp
+#Documentation on for loops: https://www.w3schools.com/python/python_for_loops.asp
 for i in range(75,1,-1):
     #This line of code here calls on the random module we initated earlier to call its randint method. This method will generate a pseudo-random number between the values I indicate
     #in parameters. In this case the minimum number for it to generate is 1 and the maximum number is 1000. Once this number is generated it is appended to the sorting list and the
     #for loop will move on to the next interation to generate another number to append to the sortinglist. This will continue until the loop has been run the specified number of times,
     #in this case 75 times.
+    #Documentation on random: https://docs.python.org/3/library/random.html
     sortinglist.append(random.randint(1, 1001))
 
 
@@ -25,7 +28,6 @@ def merge_sort(array):
     #This array will continuously split the arrays fed into it in half. If ever it gets to the point that it cannot be split in half any further (ie only one or none elements are in it)
     #this if statement will simply return the array that was fed in thus ending the recursions. In laymans terms, this is the exit condition.
     if len(array) < 2:
-
         return array
 
     #Simple calculation for the mid point of whatever array has been fed in. It will take the number of elements in the array and divide it by 2, flooring the result.
@@ -39,6 +41,7 @@ def merge_sort(array):
     return merge(
         #This left parameter along with the right parameter recall the merge_sort function feeding in the parameters of everything left of the midpoint of the array in the left parameter
         #and feeding everything to the right of the midpoint, including the midpoint itself as the right array.
+        #Documentation on array indexing and splicing: https://www.w3schools.com/python/python_lists_access.asp
         left=merge_sort(array[:midpoint]),
 
         right=merge_sort(array[midpoint:]))
